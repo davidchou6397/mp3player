@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" type="text/css" href="assets/fontawesome/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/fake-bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/style.css">
+ 
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="assets/app.js"></script>
+        <script type="text/javascript" src="assets/zepto/zepto.min.js"></script>
+        <script type="text/javascript" src="assets/zepto/zepto-touch.min.js"></script>
+		
+		<title>µPlayer</title>
+    </head>
+    
+    <body>
+		<a href="http://fontawesome.io/" class="btn btn-large btn-info"><i class="fa fa-crosshairs"></i>&nbsp;Font Awesome</a>
+
+		<a href="http://zeptojs.com" class="btn btn-large"><i class="fa fa-cogs"></i>&nbsp;ZeptoJS</a>
+	
+        <h1>Audio Player</h1>
+        <p id="audio_position">0.000 sec</p>
+        <p>
+            <select id="playlist" onchange="updateMedia()">
+                
+                 <option value="http://audio.ibeat.org/content/p1rj1s/p1rj1s_-_rockGuitar.mp3">Internet</option>
+                 <option checked value="/android_asset/www/test.mp3">Asset</option>
+                 <option value="test.mp3">SD Card</option>
+                 
+            </select>
+        </p>
+        
+        <a href="#" onclick="app.playAudio()"><img id="play" src="images/play.png"></a>
+        <a href="#" onclick="app.stopAudio()"><img id="stop" src="images/stop.png"></a>
+
+        <!--
+            Icons' URLs (sources):
+        
+            - stop.png: http://www.iconarchive.com/show/must-have-icons-by-visualpharm/Stop-icon.html
+            - play.png: http://www.iconarchive.com/show/must-have-icons-by-visualpharm/Play-icon.html
+            - pause.png: http://www.iconarchive.com/show/must-have-icons-by-visualpharm/Pause-icon.html
+        
+            Currently 48x48 size is used. Next is 128x128, a bit to large, so it most likely will have to be reduced.
+        -->
+      
+    </body>
+    
+</html>
